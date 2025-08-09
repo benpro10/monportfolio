@@ -9,8 +9,8 @@ const Navigation = () => {
     { id: 'home', label: 'Accueil' },
     { id: 'about', label: 'À propos' },
     { id: 'skills', label: 'Compétences' },
-    { id: 'portfolio', label: 'Portfolio' },
-    { id: 'blog', label: 'Blog' },
+    // { id: 'portfolio', label: 'Portfolio' },
+    // { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -43,7 +43,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            &lt;/&gt; Portfolio
+            &lt;/&gt; Exauce Benjamin Kyalondawa
           </div>
           
           <div className="hidden md:flex space-x-8">

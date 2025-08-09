@@ -1,65 +1,67 @@
-import { useState } from 'react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulation d'envoi du formulaire
-    toast.success('Message envoyé avec succès ! Je vous répondrai bientôt.');
-    
+    toast.success("Message envoyé avec succès ! Je vous répondrai bientôt.");
+
     // Réinitialiser le formulaire
     setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const contactInfo = [
     {
-      icon: '📧',
-      title: 'Email',
-      value: 'contact@monportfolio.fr',
-      action: 'mailto:contact@monportfolio.fr'
+      icon: "📧",
+      title: "Email",
+      value: "exaucebenjamink@gmail.com",
+      action: "mailto:exaucebenjamink@gmail.com",
     },
     {
-      icon: '📱',
-      title: 'Téléphone',
-      value: '+33 6 12 34 56 78',
-      action: 'tel:+33612345678'
+      icon: "🟢", // alternative emoji combiné (ou voir ci-dessous pour Unicode ou HTML)
+      title: "WhatsApp",
+      value: "+243 81 25 44 510",
+      action: "https://wa.me/243812544510",
     },
     {
-      icon: '📍',
-      title: 'Localisation',
-      value: 'Paris, France',
-      action: '#'
+      icon: "📍",
+      title: "Localisation",
+      value: "Kinshasa, République Démocratique du Congo",
+      action: "#",
     },
     {
-      icon: '💼',
-      title: 'LinkedIn',
-      value: '/in/monprofil',
-      action: 'https://linkedin.com'
-    }
+      icon: "💼",
+      title: "LinkedIn",
+      value: "/in/exauce-benjamin-kyalondawa",
+      action: "https://linkedin.comhttps://www.linkedin.com/in/exauce-benjamin-kyalondawa ",
+    },
   ];
 
   return (
@@ -67,12 +69,15 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Me{' '}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Contacter</span>
+            Me{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Contacter
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Vous avez un projet en tête ? Parlons-en ! Je serais ravi de discuter de vos idées et de vous aider à les concrétiser.
+            Vous avez un projet en tête ? Parlons-en ! Je serais ravi de
+            discuter de vos idées et de vous aider à les concrétiser.
           </p>
         </div>
 
@@ -80,7 +85,9 @@ const Contact = () => {
           {/* Informations de contact */}
           <div className="lg:col-span-2 space-y-6">
             <Card className="p-6 bg-gradient-card border-border/50 shadow-card">
-              <h3 className="text-xl font-semibold text-primary mb-6">Informations de contact</h3>
+              <h3 className="text-xl font-semibold text-primary mb-6">
+                Informations de contact
+              </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
@@ -93,7 +100,9 @@ const Contact = () => {
                       <div className="font-medium text-foreground group-hover:text-primary transition-colors">
                         {info.title}
                       </div>
-                      <div className="text-sm text-muted-foreground">{info.value}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {info.value}
+                      </div>
                     </div>
                   </a>
                 ))}
@@ -101,14 +110,17 @@ const Contact = () => {
             </Card>
 
             <Card className="p-6 bg-gradient-card border-border/50 shadow-card">
-              <h3 className="text-xl font-semibold text-primary mb-4">Disponibilité</h3>
+              <h3 className="text-xl font-semibold text-primary mb-4">
+                Disponibilité
+              </h3>
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                   <span>Disponible pour de nouveaux projets</span>
                 </div>
                 <p className="text-sm">
-                  Réponse généralement sous 24h. N'hésitez pas à me contacter pour discuter de votre projet !
+                  Réponse généralement sous 24h. N'hésitez pas à me contacter
+                  pour discuter de votre projet !
                 </p>
               </div>
             </Card>
@@ -117,12 +129,17 @@ const Contact = () => {
           {/* Formulaire de contact */}
           <div className="lg:col-span-3">
             <Card className="p-8 bg-gradient-card border-border/50 shadow-card">
-              <h3 className="text-xl font-semibold text-primary mb-6">Envoyez-moi un message</h3>
-              
+              <h3 className="text-xl font-semibold text-primary mb-6">
+                Envoyez-moi un message
+              </h3>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Nom complet *
                     </label>
                     <Input
@@ -136,9 +153,12 @@ const Contact = () => {
                       placeholder="Votre nom"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Email *
                     </label>
                     <Input
@@ -155,7 +175,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Sujet *
                   </label>
                   <Input
@@ -171,7 +194,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -191,8 +217,18 @@ const Contact = () => {
                   size="lg"
                   className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
                 >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                    />
                   </svg>
                   Envoyer le message
                 </Button>

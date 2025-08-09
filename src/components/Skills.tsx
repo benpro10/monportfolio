@@ -7,9 +7,8 @@ const Skills = () => {
       skills: [
         { name: 'React', level: 90, icon: '⚛️' },
         { name: 'TypeScript', level: 85, icon: '🔷' },
-        { name: 'Next.js', level: 80, icon: '▲' },
+        { name: 'HTML5', level: 90, icon: '🌐' },
         { name: 'Tailwind CSS', level: 95, icon: '🎨' },
-        { name: 'Vue.js', level: 75, icon: '💚' },
       ]
     },
     {
@@ -19,17 +18,16 @@ const Skills = () => {
         { name: 'Express', level: 85, icon: '🚀' },
         { name: 'MongoDB', level: 80, icon: '🍃' },
         { name: 'PostgreSQL', level: 82, icon: '🐘' },
-        { name: 'GraphQL', level: 75, icon: '📊' },
+        { name: 'Adonis', level: 75, icon: '🛡️' },
+        { name: 'Next.js', level: 75, icon: '📦' },
       ]
     },
     {
       title: 'Outils & DevOps',
       skills: [
         { name: 'Git', level: 90, icon: '📋' },
-        { name: 'Docker', level: 78, icon: '🐳' },
         { name: 'AWS', level: 70, icon: '☁️' },
         { name: 'Vercel', level: 85, icon: '▲' },
-        { name: 'Jest', level: 80, icon: '🧪' },
       ]
     }
   ];
